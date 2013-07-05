@@ -1,0 +1,6 @@
+[submodule "source/modules/google-test"]
+	path = source/modules/google-test
+	url = git@github.com:mp-labs/google-test.git
+[submodule "source/modules/MovingPixelBuild"]
+	path = source/modules/MovingPixelBuild
+	url = git@github.com:mp-labs/MovingPixelBuild.git
