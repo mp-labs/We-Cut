@@ -13,7 +13,16 @@ set( GOOGLE_TEST_DIR modules/google-test )
 include( mpbGoogleTest )
 
 # Adding Qt5
-include( libraries/mpbQt5 )
+find_package( Qt5Gui REQUIRED )
+
+# Adding Kore
+add_subdirectory( modules/libKore/source )
+if( NOT KORE_FOUND )
+    mpb_error_fatal( "Missing Kore library" )
+endif( NOT KORE_FOUND )
+message( "Inc: ${KORE_INCLUDES}" )
+include_directories( ${KORE_INCLUDES} )
 
 add_executable( WeCut src/main.cpp )
-target_link_libraries( WeCut gtest gtest_main )
+target_link_libraries( WeCut ${KORE_TARGET} )
+qt5_use_modules( WeCut Gui )

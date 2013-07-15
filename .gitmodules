@@ -4,3 +4,6 @@
 [submodule "source/modules/MovingPixelBuild"]
 	path = source/modules/MovingPixelBuild
 	url = git@github.com:mp-labs/MovingPixelBuild.git
+[submodule "source/modules/libKore"]
+	path = source/modules/libKore
+	url = git@github.com:mp-labs/libKore.git
