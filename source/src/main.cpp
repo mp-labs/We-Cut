@@ -25,9 +25,16 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <gtest/gtest.h>
+#include <QtGui/QGuiApplication>
+
+#include <KoreApplication.hpp>
+using namespace Kore;
 
 int main( int argc, char** argv )
 {
-    return 0;
+    QGuiApplication app( argc, argv );
+
+    KoreApplication koreApp( argc, argv );
+
+    return app.exec();
 }
